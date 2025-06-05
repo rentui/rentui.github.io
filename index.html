@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>认推组织</title>
+    <style>
+        /* 全局样式，丑不拉几的 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', Arial, sans-serif; /*被微软雅黑扣下了😏😏😏*/
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* 导航栏，像个lz */
+        .navbar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 50px;
+            width: auto;
+            margin-right: 15px;
+        }
+        
+        .org-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        /* 主要内容，没用也有用 */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .hero {
+            background-color: white;
+            border-radius: 8px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* 特色部分，特色也没多少 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* 页脚不会吗？ */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        /* 响应式不会吗？ */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .logo-container {
+                margin-bottom: 1rem;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: space-around;
+            }
+            
+            .nav-links li {
+                margin: 0;
+            }
+            
+            .hero {
+                padding: 2rem 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="rentui.png" alt="认推组织标志" class="logo">
+            <span class="org-name">认推组织</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">关于我们</a></li>
+            <li><a href="#services">服务</a></li>
+            <li><a href="#contact">联系我们</a></li>
+        </ul>
+    </nav>
+    
+
+    <div class="container">
+        <section class="hero">
+            <h1>欢迎来到认推的网站</h1>
+            <p>我们全力开发AI与操作系统，致力于打造一个开放、包容、创新的社区。</p>
+            <a href="#join" class="btn">立即加入(测试阶段，无反应)</a>
+        </section>
+        
+        <section id="about">
+            <h2>关于我们</h2>
+            <p>认推组织成立于2025/6/2年，是一个专注于人工智能和操作系统领域的开源社区。</p>
+        </section>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>技术分享(测试阶段，无反应)</h3>
+                <p>可在哔哩哔哩网站，Gitub上找到关于我们的资源</p>
+            </div>
+            <div class="feature-card">
+                <h3>项目合作</h3>
+                <p>为各位提供项目合作平台，实现资源共享和优势互补。</p>
+            </div>
+            <div class="feature-card">
+                <h3>未来发展</h3>
+                <p>提供丰富的AI与操作系统开放源代码</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 认推组织 版权所有</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.style.padding = '0.5rem 2rem';
+                    navbar.style.background = 'rgba(44, 62, 80, 0.9)';
+                } else {
+                    navbar.style.padding = '1rem 2rem';
+                    navbar.style.background = '#2c3e50';
+                }
+            });
+            
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>
